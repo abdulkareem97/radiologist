@@ -77,29 +77,40 @@ const DashboardLayout = ({ children }) => {
                   <>
                     <li className="px-5 hidden md:block">
                       <div className="flex flex-row items-center mt-5 h-8">
-                        <div className="text-sm font-light tracking-wide text-gray-400 uppercase">Studio</div>
+                        <div className="text-sm font-light tracking-wide text-gray-400 uppercase">Function Hall</div>
                       </div>
                     </li>
 
 
               {      <>
                       <li onClick={toggleDropDown.bind(this, 'lab')}>
-                        <Link to={routes.categories()} className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-gray-800 pr-6">
+                        <Link to={routes.functionHalls()} className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-gray-800 pr-6">
                           <span className="inline-flex justify-center items-center ml-4">
                             <BsPersonFillAdd />
                           </span>
-                          <span className="ml-2 text-sm tracking-wide truncate">Category</span>
+                          <span className="ml-2 text-sm tracking-wide truncate">Add Detail</span>
 
                         </Link>
                       </li>
                     </>}
               {      <>
                       <li onClick={toggleDropDown.bind(this, 'lab')}>
-                        <Link to={routes.catalogues()} className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-gray-800 pr-6">
+                        <Link to={routes.bookings()} className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-gray-800 pr-6">
                           <span className="inline-flex justify-center items-center ml-4">
                             <BsPersonFillAdd />
                           </span>
-                          <span className="ml-2 text-sm tracking-wide truncate">Catalogue</span>
+                          <span className="ml-2 text-sm tracking-wide truncate">Book </span>
+
+                        </Link>
+                      </li>
+                    </>}
+              {      <>
+                      <li onClick={toggleDropDown.bind(this, 'lab')}>
+                        <Link to={routes.viewAll()} className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-gray-800 pr-6">
+                          <span className="inline-flex justify-center items-center ml-4">
+                            <BsPersonFillAdd />
+                          </span>
+                          <span className="ml-2 text-sm tracking-wide truncate">View All </span>
 
                         </Link>
                       </li>

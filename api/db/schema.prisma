@@ -18,42 +18,54 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 // TODO: Please remove the following example:
 
-model Category {
-  id            Int         @id @default(autoincrement())
-  category_name String
-  created_at    DateTime    @default(now())
-  updated_at    DateTime    @updatedAt
-  extra         Json?
-  Catalogue     Catalogue[]
-  emp           String
+model FunctionHall {
+  id         Int       @id @default(autoincrement())
+  name       String
+  address    String
+  phone_no   String
+  no_of_slot Int
+  slot_price Int
+  slot_names Json
+  desc       String
+  status     String
+  imageUrl   Json
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
+  extra      Json?
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  Booking    Booking[]
+  userId     Int
 }
 
-model Catalogue {
-  id           Int      @id @default(autoincrement())
-  product_name String
-  product_code String
-  description  String
-  price        Float
-  image_url    String
-  category     Category @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  created_at   DateTime @default(now())
-  updated_at   DateTime @updatedAt
-  extra        Json?
-  categoryId   Int
-  emp          String
+model Booking {
+  id            Int          @id @default(autoincrement())
+  name          String
+  phone_no      String
+  slots         Json
+  prize         Json
+  date          DateTime
+  desc          String
+  status        String
+  function_hall FunctionHall @relation(fields: [functionHallId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+  extra          Json?
+  functionHallId Int
 }
 
 model User {
-  id                  Int       @id @default(autoincrement())
+  id                  Int            @id @default(autoincrement())
   name                String?
-  email               String    @unique
+  email               String         @unique
   hashedPassword      String
   salt                String
   resetToken          String?
   resetTokenExpiresAt DateTime?
   roles               String
   permissions         Json?
-  created_at          DateTime  @default(now())
-  updated_at          DateTime  @updatedAt
+  created_at          DateTime       @default(now())
+  updated_at          DateTime       @updatedAt
   extra               Json?
+  FunctionHall        FunctionHall[]
 }

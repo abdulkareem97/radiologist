@@ -17,6 +17,7 @@ import DashboardLayout from './layouts/DashboardLayout/DashboardLayout'
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
+
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
@@ -24,19 +25,27 @@ const Routes = () => {
       <PrivateSet unauthenticated='login' >
         <Set wrap={DashboardLayout}>
           <Route path="/" page={HomePage} name="home" />
+          <Route path="/view-all" page={ViewAllPage} name="viewAll" />
 
-          <Set wrap={ScaffoldLayout} title="Catalogues" titleTo="catalogues" buttonLabel="New Catalogue" buttonTo="newCatalogue">
-            <Route path="/catalogues/new" page={CatalogueNewCataloguePage} name="newCatalogue" />
-            <Route path="/catalogues/{id:Int}/edit" page={CatalogueEditCataloguePage} name="editCatalogue" />
-            <Route path="/catalogues/{id:Int}" page={CatalogueCataloguePage} name="catalogue" />
-            <Route path="/catalogues" page={CatalogueCataloguesPage} name="catalogues" />
-          </Set>
-          <Set wrap={ScaffoldLayout} title="Categories" titleTo="categories" buttonLabel="New Category" buttonTo="newCategory">
-            <Route path="/categories/new" page={CategoryNewCategoryPage} name="newCategory" />
-            <Route path="/categories/{id:Int}/edit" page={CategoryEditCategoryPage} name="editCategory" />
-            <Route path="/categories/{id:Int}" page={CategoryCategoryPage} name="category" />
-            <Route path="/categories" page={CategoryCategoriesPage} name="categories" />
-          </Set>
+          <Set wrap={ScaffoldLayout} title="Bookings" titleTo="bookings" buttonLabel="New Booking" buttonTo="newBooking">
+        <Route path="/bookings/new" page={BookingNewBookingPage} name="newBooking" />
+        <Route path="/bookings/{id:Int}/edit" page={BookingEditBookingPage} name="editBooking" />
+        <Route path="/bookings/{id:Int}" page={BookingBookingPage} name="booking" />
+        <Route path="/bookings" page={BookingBookingsPage} name="bookings" />
+      </Set>
+      <Set wrap={ScaffoldLayout} title="FunctionHalls" titleTo="functionHalls" buttonLabel="New FunctionHall" buttonTo="newFunctionHall">
+        <Route path="/function-halls/new" page={FunctionHallNewFunctionHallPage} name="newFunctionHall" />
+        <Route path="/function-halls/{id:Int}/edit" page={FunctionHallEditFunctionHallPage} name="editFunctionHall" />
+        <Route path="/function-halls/{id:Int}" page={FunctionHallFunctionHallPage} name="functionHall" />
+        <Route path="/function-halls" page={FunctionHallFunctionHallsPage} name="functionHalls" />
+      </Set>
+      <Set wrap={ScaffoldLayout} title="Users" titleTo="users" buttonLabel="New User" buttonTo="newUser">
+        <Route path="/users/new" page={UserNewUserPage} name="newUser" />
+        <Route path="/users/{id:Int}/edit" page={UserEditUserPage} name="editUser" />
+        <Route path="/users/{id:Int}" page={UserUserPage} name="user" />
+        <Route path="/users" page={UserUsersPage} name="users" />
+      </Set>
+
 
         </Set>
       </PrivateSet>

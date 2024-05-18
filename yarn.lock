@@ -7795,6 +7795,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"autobind-decorator@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "autobind-decorator@npm:2.4.0"
+  checksum: b31781d582e24b69aa88017046613e4f88e59f33f81c38c2885435c790fc8b4b1f52daf148c63cd609101795873daaae78aeb6c00b110a08dcbecefdcabc17f1
+  languageName: node
+  linkType: hard
+
 "autoprefixer@npm:^10.4.17":
   version: 10.4.17
   resolution: "autoprefixer@npm:10.4.17"
@@ -14518,6 +14525,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jodit-react@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "jodit-react@npm:4.1.2"
+  dependencies:
+    jodit: "npm:^4.2.10"
+  peerDependencies:
+    react: ~0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ~0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 2b762e3481191d30099c50ec8a840e183c6cfabba9c77b192034469df0b4d31488ce1586bb6eddee2a12c0efd016f6ce3f98d45719162c33e7804567eee7a87c
+  languageName: node
+  linkType: hard
+
+"jodit@npm:^4.2.10":
+  version: 4.2.10
+  resolution: "jodit@npm:4.2.10"
+  dependencies:
+    autobind-decorator: "npm:^2.4.0"
+  checksum: b52805fd63106a8ac7c6f2018ef8ea9bb65cb9ec2c4b29c2e83fc3f133d99ebaa856a34ec414e0f5d5c4660dbb69c5b007cd34a43146e873db344ecf50cf3863
+  languageName: node
+  linkType: hard
+
 "jose@npm:^4.11.4":
   version: 4.15.4
   resolution: "jose@npm:4.15.4"
@@ -18185,6 +18213,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-spinners@npm:^0.13.8":
+  version: 0.13.8
+  resolution: "react-spinners@npm:0.13.8"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 59a030ece288f045a443e0b720c94636fc00667bcb8cd5a36ed8342cc2bc52a98106a676875551b3389ae5943bd7c4d4aa2ede0fb914bbde4322211f0f0120a8
+  languageName: node
+  linkType: hard
+
 "react-transition-group@npm:^4.3.0":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
@@ -18788,9 +18826,11 @@ __metadata:
     "@redwoodjs/auth-dbauth-setup": "npm:6.6.4"
     "@redwoodjs/core": "npm:6.6.4"
     firebase: "npm:^10.8.0"
+    jodit-react: "npm:^4.1.2"
     prettier-plugin-tailwindcss: "npm:0.4.1"
     react-icons: "npm:^5.0.1"
     react-select: "npm:^5.8.0"
+    react-spinners: "npm:^0.13.8"
   languageName: unknown
   linkType: soft
 
