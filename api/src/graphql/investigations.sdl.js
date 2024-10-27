@@ -3,6 +3,7 @@ export const schema = gql`
     id: Int!
     name: String!
     perc: Float!
+    amount: Float!
     created_at: DateTime!
     updated_at: DateTime!
     extra: JSON
@@ -16,12 +17,14 @@ export const schema = gql`
   input CreateInvestigationInput {
     name: String!
     perc: Float!
+    amount: Float!
     extra: JSON
   }
 
   input UpdateInvestigationInput {
     name: String
     perc: Float
+    amount: Float
     extra: JSON
   }
 

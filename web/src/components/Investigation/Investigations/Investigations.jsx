@@ -81,6 +81,11 @@ const InvestigationsList = ({ investigations }) => {
 
     {
       headerClassName: 'text-left',
+      Header: 'Amount',
+      accessor: 'amount',
+    },
+    {
+      headerClassName: 'text-left',
       Header: 'Percentage',
       accessor: 'perc',
     },

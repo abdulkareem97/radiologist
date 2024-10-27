@@ -9,6 +9,11 @@ export const patient = ({ id }) => {
     where: { id },
   })
 }
+export const patientByPhoneNo = ({ phone_no }) => {
+  return db.patient.findMany({
+    where: { phone_no },
+  })
+}
 
 export const createPatient = ({ input }) => {
   return db.patient.create({

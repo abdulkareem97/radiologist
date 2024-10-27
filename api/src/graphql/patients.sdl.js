@@ -15,6 +15,7 @@ export const schema = gql`
   type Query {
     patients: [Patient!]! @requireAuth
     patient(id: Int!): Patient @requireAuth
+    patientByPhoneNo(phone_no: String!): [Patient!]! @requireAuth
   }
 
   input CreatePatientInput {

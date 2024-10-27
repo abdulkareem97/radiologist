@@ -10,7 +10,18 @@ export const QUERY = gql`
       updated_at
       extra
       patientId
+      patient {
+        id
+        name
+        age
+        phone_no
+        gender
+      }
       referDoctorId
+      referDr {
+        id
+        name
+      }
     }
   }
 `

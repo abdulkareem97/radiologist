@@ -44,7 +44,7 @@ const UserLayout = ({ children }) => {
           </Link>
 
           <Link
-            to={routes.pendingPatient()}
+            to={routes.records()}
             onClick={() => setActiveTab('Pending')}
             className={`flex flex-col items-center ${
               activeTab === 'Pending' ? 'text-indigo-600' : 'text-gray-500'

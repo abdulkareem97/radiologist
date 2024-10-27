@@ -16048,6 +16048,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"multiselect-react-dropdown@npm:^2.0.25":
+  version: 2.0.25
+  resolution: "multiselect-react-dropdown@npm:2.0.25"
+  peerDependencies:
+    react: ^16.7.0 || ^17.0.0 || ^18.0.0
+  checksum: 2a0e8eb987498e26050fccb067044468a7eea1d5ac4ac452bbf6db1d4f87384f8d700b549a55ae7bb4dec91a3d223b8011cf214fb14b3632908085f15cc15909
+  languageName: node
+  linkType: hard
+
 "mute-stream@npm:0.0.8":
   version: 0.0.8
   resolution: "mute-stream@npm:0.0.8"
@@ -18193,6 +18202,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-js-dialog-box@npm:^1.1.6":
+  version: 1.1.6
+  resolution: "react-js-dialog-box@npm:1.1.6"
+  checksum: e0c484d9bbc784c5cadafe52f8fff46a985d89c4eefeaecc92fcc72bd57e8b34c90e961122690359c883b9d398b28e41cfe3b09c5d7a5845f0c09a7f50db4a62
+  languageName: node
+  linkType: hard
+
 "react-refresh@npm:0.14.0, react-refresh@npm:^0.14.0":
   version: 0.14.0
   resolution: "react-refresh@npm:0.14.0"
@@ -18200,23 +18216,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-select@npm:^5.8.0":
-  version: 5.8.0
-  resolution: "react-select@npm:5.8.0"
+"react-select@npm:^5.8.2":
+  version: 5.8.2
+  resolution: "react-select@npm:5.8.2"
   dependencies:
-    "@babel/runtime": "npm:^7.12.0"
-    "@emotion/cache": "npm:^11.4.0"
-    "@emotion/react": "npm:^11.8.1"
-    "@floating-ui/dom": "npm:^1.0.1"
-    "@types/react-transition-group": "npm:^4.4.0"
-    memoize-one: "npm:^6.0.0"
-    prop-types: "npm:^15.6.0"
-    react-transition-group: "npm:^4.3.0"
-    use-isomorphic-layout-effect: "npm:^1.1.2"
+    "@babel/runtime": ^7.12.0
+    "@emotion/cache": ^11.4.0
+    "@emotion/react": ^11.8.1
+    "@floating-ui/dom": ^1.0.1
+    "@types/react-transition-group": ^4.4.0
+    memoize-one: ^6.0.0
+    prop-types: ^15.6.0
+    react-transition-group: ^4.3.0
+    use-isomorphic-layout-effect: ^1.1.2
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: b4b98aaf117ee5cc4642871b7bd51fd0e2697988d0b880f30b21e933ca90258959147117d8aada36713b622e0e4cb06bd18ec02069f3f108896e0d31e69e3c16
+  checksum: 3089b8bfb23f556a7b1de07ea654fc5f5976f531a731a0231bbcbc195afb9294c36f49d712712f2deefc13eb6d7ede4aa1d80cb45b80afd3e26fde2f09db35eb
   languageName: node
   linkType: hard
 
@@ -18847,9 +18863,11 @@ __metadata:
     "@redwoodjs/core": 6.6.4
     firebase: ^10.8.0
     jodit-react: ^4.1.2
+    multiselect-react-dropdown: ^2.0.25
     prettier-plugin-tailwindcss: 0.4.1
     react-icons: ^5.0.1
-    react-select: ^5.8.0
+    react-js-dialog-box: ^1.1.6
+    react-select: ^5.8.2
     react-spinners: ^0.13.8
     react-table-6: ^6.11.0
   languageName: unknown

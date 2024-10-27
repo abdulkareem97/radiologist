@@ -49,6 +49,23 @@ const InvestigationForm = (props) => {
 
         <div>
           <Label
+            name="amount"
+            className="mb-1 block text-sm font-medium text-gray-700"
+            errorClassName="text-red-500"
+          >
+            Amount
+          </Label>
+          <TextField
+            name="amount"
+            defaultValue={props.investigation?.amount}
+            className="w-full rounded-md border px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500"
+            errorClassName="border-red-500"
+            validation={{ valueAsNumber: true, required: true }}
+          />
+          <FieldError name="amount" className="mt-1 text-sm text-red-500" />
+        </div>
+        <div>
+          <Label
             name="perc"
             className="mb-1 block text-sm font-medium text-gray-700"
             errorClassName="text-red-500"

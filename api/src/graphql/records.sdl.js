@@ -15,13 +15,12 @@ export const schema = gql`
   type Query {
     records: [Record!]! @requireAuth
     record(id: Int!): Record @requireAuth
+    recordsByStatus(status: String!): [Record!]! @requireAuth
   }
 
   input CreateRecordInput {
     info: JSON!
     status: String!
-    created_at: DateTime!
-    updated_at: DateTime!
     extra: JSON
     patientId: Int!
     referDoctorId: Int!
@@ -30,8 +29,6 @@ export const schema = gql`
   input UpdateRecordInput {
     info: JSON
     status: String
-    created_at: DateTime
-    updated_at: DateTime
     extra: JSON
     patientId: Int
     referDoctorId: Int

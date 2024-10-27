@@ -56,6 +56,14 @@ const Investigation = ({ investigation }) => {
           </tr>
           <tr>
             <th className="px-4 py-2 text-left text-sm font-medium text-gray-500">
+              Amount
+            </th>
+            <td className="px-4 py-2 text-sm text-gray-700">
+              {investigation.amount}
+            </td>
+          </tr>
+          <tr>
+            <th className="px-4 py-2 text-left text-sm font-medium text-gray-500">
               Percentage
             </th>
             <td className="px-4 py-2 text-sm text-gray-700">

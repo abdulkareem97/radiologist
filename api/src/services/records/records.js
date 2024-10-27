@@ -3,6 +3,13 @@ import { db } from 'src/lib/db'
 export const records = () => {
   return db.record.findMany()
 }
+export const recordsByStatus = ({ status }) => {
+  return db.record.findMany({
+    where: {
+      status,
+    },
+  })
+}
 
 export const record = ({ id }) => {
   return db.record.findUnique({

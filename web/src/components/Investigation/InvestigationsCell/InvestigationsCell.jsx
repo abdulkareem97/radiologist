@@ -8,6 +8,7 @@ export const QUERY = gql`
       id
       name
       perc
+      amount
       created_at
       updated_at
       extra
