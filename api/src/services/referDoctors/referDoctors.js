@@ -3,7 +3,23 @@ import { db } from 'src/lib/db'
 export const referDoctors = () => {
   return db.referDoctor.findMany()
 }
-
+export const reportReferalDoctor = async ({ startDate, endDate, id }) => {
+  const data = await db.record.findMany({
+    where: {
+      referDoctorId: id,
+      created_at: {
+        gte: new Date(startDate),
+        lte: new Date(endDate),
+      },
+    },
+    orderBy: [
+      {
+        id: 'desc',
+      },
+    ],
+  })
+  return data
+}
 export const referDoctor = ({ id }) => {
   return db.referDoctor.findUnique({
     where: { id },

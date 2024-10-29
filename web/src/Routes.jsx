@@ -13,22 +13,26 @@ import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 
 import { useAuth } from './auth'
 import DashboardLayout from './layouts/DashboardLayout/DashboardLayout'
+import ReportLayout from './layouts/ReportLayout/ReportLayout'
 import userLayout from './layouts/UserLayout/UserLayout'
 
 const Routes = () => {
   return (
     <Router useAuth={useAuth}>
       <Route path="/login" page={LoginPage} name="login" />
-      <Route path="/signup" page={SignupPage} name="signup" />
+
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <PrivateSet unauthenticated="login">
         <Set wrap={userLayout}>
           <Route path="/" page={HomePage} name="home" />
+          <Route path="/signup" page={SignupPage} name="signup" />
           <Route path="/setting" page={SettingPage} name="setting" />
           <Route path="/completed-patient" page={CompletedPatientPage} name="completedPatient" />
           <Route path="/pending-patient" page={PendingPatientPage} name="pendingPatient" />
-          <Route path="/report" page={ReportPage} name="report" />
+          <Set wrap={ReportLayout}>
+            <Route path="/report" page={ReportPage} name="report" />
+          </Set>
           <Route path="/view-all" page={ViewAllPage} name="viewAll" />
 
           <Set wrap={ScaffoldLayout} title="Records" titleTo="records" buttonLabel="New Record" buttonTo="newRecord">

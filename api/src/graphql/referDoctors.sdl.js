@@ -14,6 +14,11 @@ export const schema = gql`
   type Query {
     referDoctors: [ReferDoctor!]! @requireAuth
     referDoctor(id: Int!): ReferDoctor @requireAuth
+    reportReferalDoctor(
+      id: Int!
+      startDate: String!
+      endDate: String!
+    ): [Record!]! @requireAuth
   }
 
   input CreateReferDoctorInput {

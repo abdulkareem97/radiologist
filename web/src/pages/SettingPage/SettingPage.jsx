@@ -1,7 +1,9 @@
 import { Link, routes } from '@redwoodjs/router'
 import { Metadata } from '@redwoodjs/web'
 
+import { useAuth } from 'src/auth'
 const SettingPage = () => {
+  const { isAuthenticated, signUp, logOut } = useAuth()
   return (
     <>
       <Metadata title="Settings" description="Settings page" />
@@ -30,6 +32,18 @@ const SettingPage = () => {
           >
             Patients
           </Link>
+          <Link
+            to={routes.signup()}
+            className="block cursor-pointer cursor-pointer rounded-lg bg-indigo-100 p-4 font-medium text-indigo-800 hover:bg-indigo-200"
+          >
+            Add Users
+          </Link>
+          <button
+            onClick={logOut}
+            className="block w-full cursor-pointer cursor-pointer rounded-lg bg-red-100 p-4 font-medium text-indigo-800 hover:bg-red-200"
+          >
+            Logout
+          </button>
         </div>
       </main>
     </>
