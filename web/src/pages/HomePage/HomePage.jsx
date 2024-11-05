@@ -6,14 +6,13 @@ const HomePage = () => {
     <>
       <Metadata title="Home" description="Home page" />
 
-      <h1>HomePage</h1>
-      <p>
-        Find me in <code>./web/src/pages/HomePage/HomePage.jsx</code>
-      </p>
-      <p>
-        My default route is named <code>home</code>, link to me with `
-        <Link to={routes.home()}>Home</Link>`
-      </p>
+      <div className="flex min-h-screen items-center justify-center bg-gray-100">
+        <img
+          src="/radilogo.png"
+          alt="Centered Image"
+          className="h-auto w-1/3"
+        />
+      </div>
     </>
   )
 }

@@ -31,6 +31,7 @@
     "react-js-dialog-box": "^1.1.6",
     "react-select": "^5.8.2",
     "react-spinners": "^0.13.8",
-    "react-table-6": "^6.11.0"
+    "react-table-6": "^6.11.0",
+    "xlsx": "^0.18.5"
   }
 }

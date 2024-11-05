@@ -1,3 +1,5 @@
+import ReportReferal from '../ReportReferal/ReportReferal'
+
 export const QUERY = gql`
   query FindReportReferalDoctorQuery(
     $id: Int!
@@ -40,6 +42,15 @@ export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error?.message}</div>
 )
 
-export const Success = ({ reportReferalDoctor }) => {
-  return <div>{JSON.stringify(reportReferalDoctor)}</div>
+export const Success = ({ reportReferalDoctor, startDate, endDate }) => {
+  return (
+    <ReportReferal
+      reportReferalDoctor={reportReferalDoctor}
+      startDate={startDate}
+      endDate={endDate}
+    />
+    // <div className=''>
+    //   hello
+    // </div>
+  )
 }

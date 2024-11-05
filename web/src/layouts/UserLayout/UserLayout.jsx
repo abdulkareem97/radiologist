@@ -10,8 +10,11 @@ import {
 
 import { Link, routes } from '@redwoodjs/router'
 
+import { useAuth } from 'src/auth'
+
 const UserLayout = ({ children }) => {
   const [activeTab, setActiveTab] = useState('Home')
+  const { isAuthenticated, currentUser, logOut, hasRole } = useAuth()
 
   return (
     <div className="flex h-screen flex-col bg-gray-100">
@@ -32,16 +35,18 @@ const UserLayout = ({ children }) => {
             <span className="text-xs">Home</span>
           </Link>
 
-          <Link
-            to={routes.report()}
-            onClick={() => setActiveTab('Report')}
-            className={`flex flex-col items-center ${
-              activeTab === 'Report' ? 'text-indigo-600' : 'text-gray-500'
-            }`}
-          >
-            <FaClipboard size={24} />
-            <span className="text-xs">Report</span>
-          </Link>
+          {currentUser.roles == 'admin' && (
+            <Link
+              to={routes.report()}
+              onClick={() => setActiveTab('Report')}
+              className={`flex flex-col items-center ${
+                activeTab === 'Report' ? 'text-indigo-600' : 'text-gray-500'
+              }`}
+            >
+              <FaClipboard size={24} />
+              <span className="text-xs">Report</span>
+            </Link>
+          )}
 
           <Link
             to={routes.records()}
