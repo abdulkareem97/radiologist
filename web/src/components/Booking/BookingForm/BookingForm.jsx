@@ -23,7 +23,7 @@ const BookingForm = (props) => {
 
   return (
     <div className="rw-form-wrapper">
-      {/* heelo */}
+
       <Form onSubmit={onSubmit} error={props.error}>
         <FormError
           error={props.error}
