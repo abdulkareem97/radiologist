@@ -2,6 +2,7 @@
 
 Welcome to [RedwoodJS](https://redwoodjs.com)!
 
+
 > **Prerequisites**
 >
 > - Redwood requires [Node.js](https://nodejs.org/en/) (=18.x) and [Yarn](https://yarnpkg.com/) (>=1.15)
